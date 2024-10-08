@@ -7,6 +7,7 @@ def cargar_datos(nombre_archivo):
     return df
 
 df_actores = cargar_datos("data/Actores.csv")
+df_mapa = cargar_datos("data/municipios_edomex.csv")
 
 st.title("Estudios previos")
 
@@ -14,3 +15,19 @@ st.write("Praesent risus velit, finibus in convallis sed, fringilla faucibus eni
 
 st.dataframe(df_actores)
 st.caption("Tomado de: http://www.google.com")
+
+st.bar_chart(df_actores, x="Actores", y="Nivel de relevancia")
+
+c1, c2, c3 = st.columns(3)
+
+c1.metric("Gobierno Federal", "40%", "5%")
+c2.metric("Sector Privado", "10%", "-3%")
+c3.metric("Sindicatos", "15%", "1%")
+
+st.map(df_mapa,
+       latitude="Latitud",
+       longitude="Longitud",
+       color="Representatividad")
+
+
+
