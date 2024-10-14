@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 st.title("Instrumento de medición")
 
@@ -87,7 +88,7 @@ if submit:
         "Nombre": nombre,
         "Edad": edad,
         "Sexo": sexo,
-        "Estado", estado_seleccionado,
+        "Estado": estado_seleccionado,
         "Coca Cola": cocacola,
         "Sprite": sprite,
         "Squirt": squirt,
