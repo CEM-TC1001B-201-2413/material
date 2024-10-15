@@ -103,12 +103,4 @@ if submit:
                             ignore_index=True)
     encuesta_df.to_csv("data/encuesta.csv", index=False)
     st.success("Registro guardado")
-    
-    
-    
-    
-    
-    
-    
-    
 
